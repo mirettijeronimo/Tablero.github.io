@@ -1,0 +1,561 @@
+  /* Reset general */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Estilos generales */
+  body {
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  }
+
+  /* Página principal (INDEX) */
+
+  .bodyUno {
+    background: url("imagenes/fondo-index.jpeg") no-repeat;
+    background-position: 50% 5%;
+    background-size: 1000px;
+  }
+
+  h1 {
+    font-size: 90px;
+    font-weight: 600;
+    font-family: 'Niconne', cursive;
+    color: #e0d6e9;
+    text-shadow: 2px 2px 0px #957dad,
+      4px 4px 0px #ee4b2b,
+      6px 6px 0px #00c2cb,
+      8px 8px 0px #ff7f50,
+      10px 10px 0px #553c9a;
+    text-align: center;
+  }
+
+  .botonInicio {
+    color: black;
+    text-align: center;
+    align-items: center;
+    text-decoration: dashed;
+  }
+
+  .inputUno {
+    position: absolute;
+    left: 50%;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: white;
+    transform: translateX(-50%);
+    top: 100px;
+    margin-top: 145px;
+  }
+
+  a {
+    position: absolute;
+    left: 43%;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: white;
+    transform: translateX(-50%);
+    top: 270px;
+    margin-top: 145px;
+  }
+
+  /*marcadores*/
+  #vidasRestantes {
+    position: absolute;
+    top: 5%;
+    display: block;
+    margin-top: 5px;
+    width: 80px;
+    aspect-ratio: 1;
+    background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
+    -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
+      radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
+      linear-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
+      linear-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
+    -webkit-mask-size: 50% 50%;
+    -webkit-mask-repeat: no-repeat;
+    animation: l19 2s infinite linear;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  @keyframes l19 {
+
+    90%,
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+
+  #puntosActuales,
+  #resultadoFinal {
+    position: absolute;
+    left: 7%;
+    display: block;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    transform: translateX(-50%);
+  }
+
+  #puntosActuales {
+    width: 400px;
+    top: 250px;
+    margin-top: 650px;
+  }
+
+  #resultadoFinal {
+    width: 400px;
+    top: 270px;
+    margin-top: 580px;
+  }
+
+  button {
+    position: absolute;
+    left: 45%;
+    top: 270px;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+
+  /*maquina de escribir*/
+  .bodyPage2 {
+    background: url("./imagenes/") no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    background-size: 2000px 1000px;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+  }
+
+  .maquinaEscribir {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    margin: 0 auto;
+    font-family: "Courier New";
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    font-size: 30px;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  .buttonBienvenida {
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+
+  /*fondo bienvenido*/
+  .fondo-mario {
+    background-image: linear-gradient(#87CEEB, #4682B4);
+    /* Cielo */
+    background-size: 100% 300px;
+    background-position: top;
+    height: 100vh;
+    position: relative;
+  }
+
+  .fondo-mario::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(#8B9467, #3E8E41);
+    /* Tierra */
+  }
+
+  .fondo-mario::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background-color: #964B00;
+    /* Tubo */
+    border-radius: 50%;
+  }
+
+  .fondo-mario .nubes {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+    background-color: #FFFFFF;
+    /* Nubes */
+    border-radius: 50%;
+  }
+
+  .fondo-mario .nubes::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 20px;
+    background-color: #FFFFFF;
+    /* Nubes */
+    border-radius: 50%;
+  }
+
+  /* Tablero */
+  #tablero {
+    margin: 50px 300px;
+    width: 70%;
+    height: 800px;
+    border-collapse: collapse;
+    background-image: url('imagenes/fondo_mario.pgn.webp');
+    /* Imagen de fondo del Reino Champiñón */
+    background-repeat: no-repeat;
+
+  }
+
+  /* Celdas del tablero */
+  .btnAvanzar {
+    position: absolute;
+    left: 50%;
+    top: 870px;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+
+  .celda {
+    width: 100px;
+    height: 125px;
+    border: 1px solid black;
+  }
+
+  /* Personajes */
+
+  .mario-img {
+    width: 10px;
+    width: 100%;
+  }
+
+  .peach {
+    background-image: url('imagenes/peach.png.jpeg');
+    /* Imagen de la Princesa Peach */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .goomba {
+    background-image: url('imagenes/goomba.jpeg');
+    /* Imagen de Bowser */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bowser {
+    background-image: url('imagenes/bowser.jpeg');
+    /* Imagen de Bowser */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Otros estilos */
+  .puerta {
+    background-image: url('imagenes/puerta.jpeg');
+    /* Imagen de moneda */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .moneda {
+    background-image: url('imagenes/moneda_de_mario.jpeg');
+    /* Imagen de moneda */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /*Diseño Preguntas*/
+  #bodyPreguntas {
+    background-image: url('imagenes/fondo-preguntas.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+
+  }
+
+  .imagenes {
+    width: 20%;
+    position: absolute;
+    top: 570px;
+  }
+
+  .imagenes2 {
+    width: 20%;
+    position: absolute;
+    top: 570px;
+    left: 80%;
+  }
+
+  /*Diseño puerta */
+  #bodyAcertijo {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: hsl(0 0% 0%);
+    gap: 2rem;
+  }
+
+  #bodyAcertijo::before {
+    --line: hsl(0 0% 95% / 0.25);
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+      linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+    mask: linear-gradient(-15deg, transparent 30%, white);
+    top: 0;
+    z-index: -1;
+  }
+
+  #section {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section p {
+    font-size: 2.25rem;
+    text-align: center;
+    background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
+    color: transparent;
+    background-clip: text;
+  }
+
+  .code {
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    color: hsl(0 0% 100%);
+    border-radius: 1rem;
+    background: hsl(0 0% 6%);
+    justify-content: center;
+    box-shadow: 0 1px hsl(0 0% 100% / 0.25) inset;
+  }
+
+  .code:hover {
+    cursor: grab;
+  }
+
+  .digit {
+    display: flex;
+    height: 100%;
+    padding: 5.5rem 1rem;
+  }
+
+  .digit:focus-visible {
+    outline-color: hsl(0 0% 50% / 0.25);
+    outline-offset: 1rem;
+  }
+
+  .digit span {
+    scale: calc(var(--active, 0) + 0.5);
+    filter: blur(calc((1 - var(--active, 0)) * 1rem));
+    transition: scale calc(((1 - var(--active, 0)) + 0.2) * 1s), filter calc(((1 - var(--active, 0)) + 0.2) * 1s);
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .digit:first-of-type {
+    padding-left: 5rem;
+  }
+
+  .digit:last-of-type {
+    padding-right: 5rem;
+  }
+
+  :root {
+    --lerp-0: 1;
+    --lerp-1: calc(sin(50deg));
+    --lerp-2: calc(sin(45deg));
+    --lerp-3: calc(sin(35deg));
+    --lerp-4: calc(sin(25deg));
+    --lerp-5: calc(sin(15deg));
+  }
+
+  .digit:is(:hover, :focus-visible) {
+    --active: var(--lerp-0);
+  }
+
+  .digit:is(:hover, :focus-visible)+.digit,
+  .digit:has(+ .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-1);
+  }
+
+  .digit:is(:hover, :focus-visible)+.digit+.digit,
+  .digit:has(+ .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-2);
+  }
+
+  .digit:is(:hover, :focus-visible)+.digit+.digit+.digit,
+  .digit:has(+ .digit + .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-3);
+  }
+
+  .digit:is(:hover, :focus-visible)+.digit+.digit+.digit+.digit,
+  .digit:has(+ .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-4);
+  }
+
+  .digit:is(:hover, :focus-visible)+.digit+.digit+.digit+.digit+.digit,
+  .digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-5);
+  }
+
+  input label {
+    text-align: center;
+    margin: 0.4rem 0;
+    box-shadow: 9px 188px 300px -81px rgba(0, 0, 0, 1);
+    border-radius: 196px;
+  }
+
+  #btnPrincipalDos {
+    padding: 15px;
+    width: 225px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+
+  /*estilos preguntas*/
+  .botonPreguntas {
+    position: absolute;
+    left: 50%;
+    top: 800px;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+
+  .textoPregunta {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Niconne', cursive;
+    color: #e0d6e9;
+    text-align: center;
+  }
+
+  .inputDos {
+    position: absolute;
+    left: 50%;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    box-shadow: 0px 4px 8px black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: white;
+    transform: translateX(-50%);
+    top: 550px;
+    margin-top: 145px;
+  }

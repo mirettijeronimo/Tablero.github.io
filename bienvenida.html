@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Matemáticas</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bodyPage2">
+    <main>
+
+        <div class="fondo-mario">
+
+            <div id="mensajeBienvenida">
+                <P class="maquinaEscribir">"¡Hola! Bienvenidos a una emocionante aventura con Mario.<br>
+                    En esta misión, ayudarás a Mario a rescatar a la princesa resolviendo ejercicios matemáticos. <br>
+                    Cada desafío que superes acercará a Mario un paso más hacia su objetivo.<br>
+                    ¿Estás listo para poner a prueba tus habilidades y salvar el día? ¡Vamos allá!"<br>
+            </div>
+            <br>
+            <form id="formulario-nombre">
+                <p class="maquinaEscribir">"Ingrese su nombre para empezar la aventura"</p>
+                <input class="inputUno" type="text" id="nombre-jugador" placeholder="Pedro Alfonso">
+                <button class="buttonBienvenida" type="submit">Iniciar juego</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="juego.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
