@@ -117,7 +117,7 @@ function mostrarPregunta(pregunta) {
   if (preguntaDisplay) {
     preguntaDisplay.style.display = "block";
     preguntaDisplay.style.visibility = "visible";
-    preguntaDisplay.innerHTML = ''; // Limpiar el contenido del elemento
+    preguntaDisplay.innerHTML = ''; 
     const textoPregunta = document.createTextNode(pregunta.pregunta);
     preguntaDisplay.appendChild(textoPregunta);
     console.log("Texto agregado:", textoPregunta);
