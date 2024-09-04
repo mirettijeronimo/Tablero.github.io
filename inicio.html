@@ -1,72 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Mario Math Rescue</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
-  <div id="resultadoFinal"></div>
-  <div id="puntosActuales">Puntos actuales: 0</div>
-  <div id="vidasRestantes">Vidas:3</div>
 
-  <table id="tablero">
-    <tr>
-      <td class="celda mario">1</td>
-      <td class="celda ">2</td>
-      <td class="celda ">3</td>
-      <td id="respuesta1" class="goomba1 goomba celda">4</td>
-      <td class="celda ">5</td>
-      <td class="celda">6</td>
-      <td class="celda moneda">7</td>
-      <td class="celda">8</td>
-      <td class="celda">9</td>
-      <td class="celda">10</td>
-    </tr>
-    <tr>
-      <td class="celda ">11</td>
-      <td class="celda ">12</td>
-      <td class="celda ">13</td>
-      <td class="celda">14</td>
-      <td class="celda">15</td>
-      <td id="respuesta2" class="goomba2 goomba celda">16</td>
-      <td class="celda">17</td>
-      <td class="celda">18</td>
-      <td class="celda">19</td>
-      <td class="celda">20</td>
-    </tr>
-    <tr>
-      <td class="celda">21</td>
-      <td class="celda">22</td>
-      <td class="celda">23</td>
-      <td class="celda">24</td>
-      <td id="respuesta3" class="goomba3  goomba celda">25</td>
-      <td class="celda puerta">26</td>
-      <td class="celda moneda">27</td>
-      <td class="celda">28</td>
-      <td class="celda">29</td>
-      <td class="celda">30</td>
-    </tr>
+  <div class="ruleta-container">
 
-    <tr>
-      <td class="celda">31</td>
-      <td class="celda">32</td>
-      <td class="celda">33</td>
-      <td id="respuesta4" class="goomba4 goomba celda ">34</td>
-      <td class="celda">35</td>
-      <td class="celda">36</td>
-      <td class="celda">37</td>
-      <td class="celda bowser">38</td>
-      <td class="celda">39</td>
-      <td class="celda peach">40</td>
-    </tr>
-  </table>
-  <button id="avanzar" class="btnAvanzar">Avanzar</button>
-  
+    <div class="ruleta-inner">
+      <div class="sector" data-value="6"><img src="imagenes/icons8-flecha-derecha-larga-50.png" alt=""></div>
+    </div>
+    <div>
+      <img class="ruleta-container-img" src="imagenes/ruleta.webp" alt="">
+    </div>
+
+
+    <div class="controls">
+      <button id="girar">Girar</button>
+    </div>
+    <div class="display">
+      <p id="pregunta-display"></p>
+      <p id="resultado"></p>
+      <p id="vidas">Vidas: 3</p>
+      <p id="puntos">Puntos: 0</p>
+    </div>
+    <div id="contenedor-responder"></div>
+  </div>
   <script src="juego.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="juego.js"></script>
 </body>
 
 </html>

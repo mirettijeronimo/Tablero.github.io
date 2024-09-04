@@ -5,10 +5,6 @@
     box-sizing: border-box;
   }
 
-  /* Estilos generales */
-  body {
-    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
-  }
 
   /* Página principal (INDEX) */
 
@@ -76,80 +72,7 @@
     margin-top: 145px;
   }
 
-  /*marcadores*/
-  #vidasRestantes {
-    position: absolute;
-    top: 5%;
-    display: block;
-    margin-top: 5px;
-    width: 80px;
-    aspect-ratio: 1;
-    background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
-    -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
-      radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
-      linear-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
-      linear-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
-    -webkit-mask-size: 50% 50%;
-    -webkit-mask-repeat: no-repeat;
-    animation: l19 2s infinite linear;
-    text-align: center;
-    padding-top: 20px;
-  }
-
-  @keyframes l19 {
-
-    90%,
-    100% {
-      background-size: 100% 100%;
-    }
-  }
-
-  #puntosActuales,
-  #resultadoFinal {
-    position: absolute;
-    left: 7%;
-    display: block;
-    padding: 5px;
-    width: 200px;
-    height: 50px;
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: white;
-    transform: translateX(-50%);
-  }
-
-  #puntosActuales {
-    width: 400px;
-    top: 250px;
-    margin-top: 650px;
-  }
-
-  #resultadoFinal {
-    width: 400px;
-    top: 270px;
-    margin-top: 580px;
-  }
-
-  button {
-    position: absolute;
-    left: 45%;
-    top: 270px;
-    display: block;
-    padding: 15px;
-    width: 229px;
-    height: 48px;
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    transform: translateX(-50%);
-  }
+  
 
   /*maquina de escribir*/
   .bodyPage2 {
@@ -270,292 +193,148 @@
     border-radius: 50%;
   }
 
-  /* Tablero */
-  #tablero {
-    margin: 50px 300px;
-    width: 70%;
-    height: 800px;
-    border-collapse: collapse;
-    background-image: url('imagenes/fondo_mario.pgn.webp');
-    /* Imagen de fondo del Reino Champiñón */
-    background-repeat: no-repeat;
-
-  }
-
-  /* Celdas del tablero */
-  .btnAvanzar {
-    position: absolute;
-    left: 50%;
-    top: 870px;
-    display: block;
-    padding: 15px;
-    width: 229px;
-    height: 48px;
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    transform: translateX(-50%);
-  }
-
-  .celda {
-    width: 100px;
-    height: 125px;
-    border: 1px solid black;
-  }
-
-  /* Personajes */
-
-  .mario-img {
-    width: 10px;
-    width: 100%;
-  }
-
-  .peach {
-    background-image: url('imagenes/peach.png.jpeg');
-    /* Imagen de la Princesa Peach */
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .goomba {
-    background-image: url('imagenes/goomba.jpeg');
-    /* Imagen de Bowser */
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .bowser {
-    background-image: url('imagenes/bowser.jpeg');
-    /* Imagen de Bowser */
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* Otros estilos */
-  .puerta {
-    background-image: url('imagenes/puerta.jpeg');
-    /* Imagen de moneda */
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .moneda {
-    background-image: url('imagenes/moneda_de_mario.jpeg');
-    /* Imagen de moneda */
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /*Diseño Preguntas*/
-  #bodyPreguntas {
-    background-image: url('imagenes/fondo-preguntas.jpg');
-    background-repeat: no-repeat;
-    background-size: 1920px 1080px;
-
-  }
-
-  .imagenes {
-    width: 20%;
-    position: absolute;
-    top: 570px;
-  }
-
-  .imagenes2 {
-    width: 20%;
-    position: absolute;
-    top: 570px;
-    left: 80%;
-  }
-
-  /*Diseño puerta */
-  #bodyAcertijo {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background: hsl(0 0% 0%);
-    gap: 2rem;
-  }
-
-  #bodyAcertijo::before {
-    --line: hsl(0 0% 95% / 0.25);
-    content: "";
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background: linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
-      linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
-    mask: linear-gradient(-15deg, transparent 30%, white);
-    top: 0;
-    z-index: -1;
-  }
-
-  #section {
-    display: grid;
-    gap: 4rem;
+  .ruleta-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  #section p {
-    font-size: 2.25rem;
-    text-align: center;
-    background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
-    color: transparent;
-    background-clip: text;
-  }
-
-  .code {
-    font-size: 3rem;
-    display: flex;
-    flex-wrap: nowrap;
-    color: hsl(0 0% 100%);
-    border-radius: 1rem;
-    background: hsl(0 0% 6%);
-    justify-content: center;
-    box-shadow: 0 1px hsl(0 0% 100% / 0.25) inset;
-  }
-
-  .code:hover {
-    cursor: grab;
-  }
-
-  .digit {
-    display: flex;
-    height: 100%;
-    padding: 5.5rem 1rem;
-  }
-
-  .digit:focus-visible {
-    outline-color: hsl(0 0% 50% / 0.25);
-    outline-offset: 1rem;
-  }
-
-  .digit span {
-    scale: calc(var(--active, 0) + 0.5);
-    filter: blur(calc((1 - var(--active, 0)) * 1rem));
-    transition: scale calc(((1 - var(--active, 0)) + 0.2) * 1s), filter calc(((1 - var(--active, 0)) + 0.2) * 1s);
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  .digit:first-of-type {
-    padding-left: 5rem;
-  }
-
-  .digit:last-of-type {
-    padding-right: 5rem;
-  }
-
-  :root {
-    --lerp-0: 1;
-    --lerp-1: calc(sin(50deg));
-    --lerp-2: calc(sin(45deg));
-    --lerp-3: calc(sin(35deg));
-    --lerp-4: calc(sin(25deg));
-    --lerp-5: calc(sin(15deg));
-  }
-
-  .digit:is(:hover, :focus-visible) {
-    --active: var(--lerp-0);
-  }
-
-  .digit:is(:hover, :focus-visible)+.digit,
-  .digit:has(+ .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-1);
-  }
-
-  .digit:is(:hover, :focus-visible)+.digit+.digit,
-  .digit:has(+ .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-2);
-  }
-
-  .digit:is(:hover, :focus-visible)+.digit+.digit+.digit,
-  .digit:has(+ .digit + .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-3);
-  }
-
-  .digit:is(:hover, :focus-visible)+.digit+.digit+.digit+.digit,
-  .digit:has(+ .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-4);
-  }
-
-  .digit:is(:hover, :focus-visible)+.digit+.digit+.digit+.digit+.digit,
-  .digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-5);
-  }
-
-  input label {
-    text-align: center;
-    margin: 0.4rem 0;
-    box-shadow: 9px 188px 300px -81px rgba(0, 0, 0, 1);
-    border-radius: 196px;
-  }
-
-  #btnPrincipalDos {
-    padding: 15px;
-    width: 225px;
-    height: 48px;
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: small;
-    font-weight: bold;
-    text-decoration: none;
+    height: 100vh;
+    background-color: #f0f0f0;
   }
   
-
-  /*estilos preguntas*/
-  .botonPreguntas {
-    position: absolute;
-    left: 50%;
-    top: 800px;
+  
+  
+  .ruleta {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #contenedor-responder {
     display: block;
-    padding: 15px;
-    width: 229px;
-    height: 48px;
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    transform: translateX(-50%);
-  }
-
-  .textoPregunta {
-    font-size: 50px;
-    font-weight: 400;
-    font-family: 'Niconne', cursive;
-    color: #e0d6e9;
-    text-align: center;
-  }
-
-  .inputDos {
+    margin-top: 20px;
+}
+.ruleta-inner {
     position: absolute;
-    left: 50%;
-    display: block;
-    padding: 15px;
-    width: 229px;
-    height: 48px;
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    transition: transform 5s; /* Transición suave para la rotación */
+    transform: rotate(0deg); /* Rotación inicial en 0 grados */
+    
+    top: 245px; /* Ajusta el valor según sea necesario */
+    left: 885px; /* Ajusta el valor según sea necesario */  
+    
+    z-index: 2; /* Asegura que este elemento esté por encima */
+}
+
+.ruleta-container-img {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    
+    top: 60px; /* Ajusta el valor según sea necesario */
+    left: 700px; /* Ajusta el valor según sea necesario */  
+    
+    z-index: 1; /* Asegura que esté debajo del .ruleta-inner */
+}
+
+  .sector {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
-    background-color: white;
-    transform: translateX(-50%);
-    top: 550px;
-    margin-top: 145px;
+    color: #333;
+    transform-origin: center;
   }
+  
+  #sector-1 {
+    transform: rotate(0deg);
+  }
+  
+  #sector-2 {
+    transform: rotate(60deg);
+  }
+  
+  #sector-3 {
+    transform: rotate(120deg);
+  }
+  
+  #sector-4 {
+    transform: rotate(180deg);
+  }
+  
+  #sector-5 {
+    transform: rotate(240deg);
+  }
+  
+  #sector-6 {
+    transform: rotate(300deg);
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    margin-top:600px;
+  }
+  
+  #girar {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    border: solid 1px black;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  #pregunta-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    
+  }
+  
+  #resultado {
+    font-size: 18px;
+    color: #666;
+  }
+  .ruleta {
+    transition: transform 3s ease-in-out;
+  }
+  
+  .girando {
+    transform: rotate(360deg);
+  }
+  
+  
+  
+  
+
+  
