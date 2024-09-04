@@ -34,11 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nombreJugador === "") {
         alert("Por favor, ingresa un nombre válido");
       } else {
-        // Realizar solicitud fetch para obtener datos
         fetch('https://jsonplaceholder.typicode.com/todos/1')
           .then(response => response.json())
           .then(data => {
-            // Guardar datos iniciales del juego en formato JSON
             const datosJuego = {
               nombreJugador: nombreJugador,
               puntos: 0,
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch('../datos.json')
     .then(response => response.json())
     .then(data => {
-      // Utilizar los datos para actualizar el juego
       estadoJuego.nombreJugador = data.nombre;
       estadoJuego.puntos = data.puntos;
 
@@ -74,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function girar() {
   console.log("Se ha iniciado el juego");
-  let rand = Math.floor(Math.random() * 20 * 360); // Redondear al múltiplo más cercano de 360
+  let rand = Math.floor(Math.random() * 20 * 360); 
   calcular(rand);
 }
 
@@ -83,19 +80,16 @@ function evaluarRespuesta(respuesta, preguntaIndex) {
   const preguntaActual = estadoJuego.preguntas[preguntaIndex];
   const respuestaNumerica = parseInt(respuesta);
   if (respuestaNumerica === preguntaActual.respuesta) {
-    // Si la respuesta es correcta, aumentar los puntos y las respuestas correctas
     estadoJuego.puntos++;
     estadoJuego.respuestasCorrectas++;
     puntosElement.textContent = `Puntos: ${estadoJuego.puntos}`;
   } else {
-    // Si la respuesta es incorrecta, disminuir las vidas
     estadoJuego.vidas--;
     vidasElement.textContent = `Vidas: ${estadoJuego.vidas}`;
   }
   girar();
 }
 
-// Función para guardar el estado del juego en JSON
 function guardarPartida() {
   const estadoPartida = {
     puntos: estadoJuego.puntos,
@@ -107,7 +101,6 @@ function guardarPartida() {
   localStorage.setItem('estadoPartida', JSON.stringify(estadoPartida));
 }
 
-// Función para cargar el estado del juego desde JSON
 function cargarPartida() {
   const estadoPartida = JSON.parse(localStorage.getItem('estadoPartida'));
   if (estadoPartida) {
@@ -155,11 +148,9 @@ function calcular(rand) {
   }
 
   mostrarPregunta(estadoJuego.preguntas[preguntaIndex]);
-
-  // Mostrar un botón para que el usuario responda
   const responderBtn = document.createElement('button');
   responderBtn.textContent = 'Responder';
-  contenedorResponder.innerHTML = ''; // Eliminar cualquier botón anterior
+  contenedorResponder.innerHTML = ''; 
   contenedorResponder.appendChild(responderBtn);
 
   responderBtn.addEventListener('click', function () {
@@ -176,7 +167,6 @@ function calcular(rand) {
     botonEnviar.addEventListener('click', function () {
       const respuesta = inputRespuesta.value;
       evaluarRespuesta(respuesta, preguntaIndex);
-      // Verificar si el juego ha terminado
       if (estadoJuego.vidas === 0) {
         alert("¡Juego terminado! Has perdido. ¿Quieres reiniciar?");
         const reiniciar = confirm("¿Quieres reiniciar?");
@@ -203,7 +193,7 @@ function calcular(rand) {
   });
 }
 
-// Función para guardar la partida en el localStorage
+
 function guardarPartidaLocalStorage() {
   const partidaGuardada = {
     puntos: estadoJuego.puntos,
@@ -214,7 +204,7 @@ function guardarPartidaLocalStorage() {
   Swal.fire("Partida guardada correctamente");
 }
 
-// Función para reiniciar el juego
+
 function reiniciarJuego() {
   estadoJuego.puntos = 0;
   estadoJuego.vidas = 3;
